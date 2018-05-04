@@ -1,0 +1,102 @@
+/* * {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+} */
+
+body {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  background-color: palegoldenrod;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+}
+
+ul {
+  text-align: left;
+  color: lightpink;
+}
+
+#item {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.devour {
+  font-size: 20px;
+  color: lightgreen;
+}
+
+#devoured {
+  margin-left: 20px;
+  text-align: center;
+}
+
+#available {
+  margin-right: 20px;
+}
+
+h1 {
+  font-family: brewsky;
+  font-size: 80px;
+  color: lightcoral;
+}
+
+h2 {
+  font-family: brewsky;
+  font-size: 40px;
+  color: lightseagreen;
+}
+
+.form {
+  font-size: 25px;
+  color: lightcoral;
+}
+
+button {
+  font-size: 16px;
+  color: lightsalmon;
+  background-color: lemonchiffon;
+  border-radius: 5px;
+  border: 2px solid lightskyblue;
+}
+
+#b {
+  border: 1px solid lightskyblue;
+  border-radius: 5px;
+  background-color: lightcyan;
+}
+
+input[type="text"] {
+  font-size: 16px;
+  color: lightslategray;
+}
+
+@font-face {
+  font-family: brewsky;
+  src: url(Brewsky.ttf);
+}
+
+@media screen and (max-width: 700px) {
+  #body {
+    width: 95%;
+  }
+  #container {
+    grid-template-columns: 1fr;
+  }
+  #devoured {
+    margin-left: 0px;
+  }
+  #available {
+    margin-right: 0px;
+  }
+}
