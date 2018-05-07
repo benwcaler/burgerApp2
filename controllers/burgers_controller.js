@@ -17,16 +17,18 @@ module.exports = function (app) {
   });
 
   app.put("/api/burgers", function (req, res) {
-    console.log(req.body)
-    db.Burger.update({
-      devoured: req.body.devoured
-    }, {
-        where: {
-          burger_name: req.body.name
-        }
-      }).then(function (resp) {
-        res.status(200).end();
-      });
+    db.Customer.create({
+      name: req.body.devourer
+    }).then(function (resp) {
+      db.Burger.update({
+        devoured: req.body.devoured,
+      }, {
+          where: {
+            burger_name: req.body.name
+          }
+        }).then(function (resp2) {
+          res.status(200).end();
+        });
+    });
   });
-
 }

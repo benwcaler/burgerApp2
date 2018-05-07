@@ -1,6 +1,10 @@
 <li id="item">
 	{{id}} - {{burger_name}}
-	<div>
-		<button class="devour" data-name="{{burger_name}}">Devour!</button>
-	</div>
+	<form class="devourer">
+		<div class="form-group">
+			<label for="bn">Devourer Name:</label>
+			<input type="text" id="dn" name="name">
+		</div>
+		<button type = "submit" class="devour" data-name="{{burger_name}}">Devour!</button>
+	</form>
 </li>

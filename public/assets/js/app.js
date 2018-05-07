@@ -1,11 +1,14 @@
 $(document).ready(function () {
-  $(".devour").on("click", function (event) {
-    var name = $(this).data("name");
+  $(".devourer").on("submit", function (event) {
+    event.preventDefault();
+    var name = $(".devour").data("name");
+    console.log(name, $("#dn").val().trim())
     $.ajax("/api/burgers", {
       type: "PUT",
       data: {
         name: name,
-        devoured: true
+        devoured: true,
+        devourer: $("#dn").val().trim()
       }
     }).then(function () {
       location.reload();
