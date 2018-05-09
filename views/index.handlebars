@@ -13,7 +13,7 @@
     <ul>
       {{#each burgers}} {{#if devoured}}
       <li id="item">
-        {{id}} - {{burger_name}}
+        {{id}} - {{burger_name}} <div id="db">Devoured by: {{Customer.name}}</div>
       </li>
       {{/if}} {{/each}}
     </ul>

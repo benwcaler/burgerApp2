@@ -1,18 +1,19 @@
 $(document).ready(function () {
   $(".devourer").on("submit", function (event) {
     event.preventDefault();
-    var name = $(".devour").data("name");
-    console.log(name, $("#dn").val().trim())
-    $.ajax("/api/burgers", {
-      type: "PUT",
-      data: {
-        name: name,
-        devoured: true,
-        devourer: $("#dn").val().trim()
-      }
-    }).then(function () {
-      location.reload();
-    });
+    if ($("#dn").val()) {
+      var name = $(".devour").data("name");
+      $.ajax("/api/burgers", {
+        type: "PUT",
+        data: {
+          name: name,
+          devoured: true,
+          devourer: $("#dn").val().trim()
+        }
+      }).then(function () {
+        location.reload();
+      });
+    }
   });
 
   $(".form").on("submit", function (event) {

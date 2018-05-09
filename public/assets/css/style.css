@@ -85,6 +85,12 @@ input[type="text"] {
   width: 100px;
 }
 
+#db {
+  font-size: 16px;
+  color: darkgrey;
+  font-style: italic;
+}
+
 @font-face {
   font-family: brewsky;
   src: url(Brewsky.ttf);
